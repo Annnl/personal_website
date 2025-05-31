@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>倪凝的个人网页</h1>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-link active" data-tab="home">首页</button>
+        <button class="tab-link" data-tab="about">关于我</button>
+        <button class="tab-link" data-tab="contact">联系方式</button>
+    </nav>
+
+    <main>
+        <div id="home" class="tab-content active">
+            <h2><span class="centered">经历</span></h2>
+            <div class="flex-container">
+                <img src="TuftsFall24_059.jpg" alt="示例图片" class="flex-image" width="200" height="270" loading="lazy">
+            <div class="flex-text"><p>我于2022年从宾夕法尼亚州立大学取得物理学学士学位，
+                并于2024年从石溪大学取得物理学硕士学位。期间在欧洲核子研究中心（CERN）的
+                ATLAS实验组从事应用域对抗神经网络的实验高能物理研究，搭建辨别底夸克衰变来源的分类器。</p></div>
+            </div>
+            
+        </div>
+
+        <div id="about" class="tab-content">
+            <h2>关于我</h2>
+            <p>这里是关于我的介绍。</p>
+            <p>你可以分享你的兴趣、技能和经历。</p>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2>联系方式</h2>
+            <p>你可以通过以下方式联系我：</p>
+            <ul>
+                <li>Email: your.email@example.com</li>
+                <li>社交媒体: @yourprofile</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

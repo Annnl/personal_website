@@ -1,0 +1,105 @@
+/* 保留之前的样式，例如 body, header */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s; /* 保留背景颜色切换效果 */
+    margin: 0; /* 移除默认的 body margin */
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 20px; /* 在头部和标签页之间添加一些间距 */
+}
+
+/* 之前按钮的样式可以保留或调整 */
+button {
+    padding: 10px 15px; /* 稍微调整按钮内边距 */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin: 5px; /* 给按钮之间添加一些间距 */
+}
+
+.centered {
+  display: block;           /* 或 inline-block */
+  width: 100%;              /* 让元素撑满容器宽度 */
+  text-align: center;       /* 仅该元素内文字居中 */  /* :contentReference[oaicite:0]{index=0} */
+}
+/* 分页标签导航样式 */
+.tabs {
+    margin-bottom: 20px;
+    display: flex; /* 让标签按钮水平排列 */
+    justify-content: center; /* 居中标签按钮 */
+}
+
+.tab-link {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+    border-radius: 5px 5px 0 0; /* 给标签顶部一些圆角 */
+    margin: 0 2px; /* 标签之间的微小间距 */
+    border-bottom: none; /* 移除底部边框，使其看起来与内容区连接 */
+}
+
+.tab-link:hover {
+    background-color: #ccc;
+}
+
+.tab-link.active {
+    background-color: #f0f0f0; /* 与页面背景色一致，或选择一个高亮色 */
+    color: #007BFF; /* 激活标签的文字颜色 */
+    border-bottom: 1px solid #f0f0f0; /* 使得激活标签看起来与内容区域融合 */
+    font-weight: bold;
+}
+/* 分页内容区域样式 */
+.tab-content {
+    display: none; /* 默认隐藏所有内容区域 */
+    padding: 20px;
+    border: 1px solid #ccc; /* 给内容区域一个边框 */
+    background-color: white; /* 内容区域背景色 */
+    animation: fadeIn 0.5s; /* 添加淡入动画效果 */
+    text-align: left;
+}
+
+.tab-content.active {
+    display: block; /* 只显示标记为 active 的内容区域 */
+    
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 确保 main 区域有一些基本布局 */
+main {
+    max-width: 800px; /* 限制内容最大宽度 */
+    margin: 0 auto; /* 居中内容 */
+    padding: 0 20px; /* 左右内边距 */
+}
+
+.flex-container {
+  display: flex;                  /* 启用 Flexbox 布局 */  /* :contentReference[oaicite:18]{index=18} */
+  align-items: flex-start;        /* 子项顶部对齐，如果需要可改为 center 垂直居中 */  /* :contentReference[oaicite:19]{index=19} */
+  gap: 16px;                       /* 子项之间水平留 16px 间距 */  /* :contentReference[oaicite:20]{index=20} */
+}
+
+.flex-text {
+  flex: 1 1 auto;                 /* 文字容器可伸缩，内容多时换行 */  /* :contentReference[oaicite:22]{index=22} */
+}
+
+.flex-text p {
+  margin: 0 0 12px;               /* 段落之间留空，形成多段效果 */  /* :contentReference[oaicite:23]{index=23} */
+  line-height: 1.5;               /* 多行段落行高，以提高可读性 */  /* :contentReference[oaicite:24]{index=24} */
+}
