@@ -8,21 +8,71 @@
 </head>
 <body>
     <header>
-        <h1>倪凝的个人网页</h1>
+        <div class="language-switch">
+            <button class="lang-btn" data-lang="zh">中文</button>
+            <button class="lang-btn active" data-lang="en">English</button>
+        </div>
+        <h1 id="main-title">Ning Ni's Personal Website</h1>
     </header>
 
     <nav class="tabs">
-        <button class="tab-link active" data-tab="home">首页</button>
-        <button class="tab-link" data-tab="swe">软件工程项目</button>
-        <button class="tab-link" data-tab="data">数据科学/AI项目</button>
-        <button class="tab-link" data-tab="hobby">兴趣爱好</button>
+        <button class="tab-link active" data-tab="home">
+            <span class="lang-content" data-lang="zh">首页</span>
+            <span class="lang-content active" data-lang="en">Home</span>
+        </button>
+        <button class="tab-link" data-tab="swe">
+            <span class="lang-content" data-lang="zh">软件工程项目</span>
+            <span class="lang-content active" data-lang="en">Software Engineering Project</span>
+        </button>
+        <button class="tab-link" data-tab="data">
+            <span class="lang-content" data-lang="zh">数据科学/AI项目</span>
+            <span class="lang-content active" data-lang="en">Data Science/AI Project</span>
+        </button>
+        <button class="tab-link" data-tab="hobby">
+            <span class="lang-content" data-lang="zh">兴趣爱好</span>
+            <span class="lang-content active" data-lang="en">Hobby</span>
+        </button>
     </nav>
 
     <main>
         <div id="home" class="tab-content active">
+        <!-- 英文版本 -->
+            <div class="lang-content active" data-lang="en">
+                <h2><span class="centered">Experience</span></h2>
+                <div class="flex-container">
+                    <img src="images/TuftsFall24_059.jpg" alt="Personal Photo" class="flex-image" width="210" height="280" loading="lazy">
+                    <div class="flex-text">
+                        <p>I graduated from Pennsylvania State University with a Bachelor's degree in Physics in 2022, 
+                            and obtained my Master's degree in Physics from Stony Brook University in 2024. 
+                            During this period, I conducted experimental high-energy physics research
+                            at CERN's ATLAS group, applying domain adversarial neural networks (DANN) to 
+                            build binary classifiers for identifying the origins of bottom quark decay.</p>
+                        <p>I am currently pursuing a Master's degree in Computer Science at Tufts University, 
+                            and have previously worked at Jetsen Huashi Cinema and Joblogic-X as software engineering intern 
+                            and data analysis intern.</p>
+                    </div>
+                </div>
+                
+                <h2><span class="centered">Contact Me</span></h2>
+                <p>Email: quark437186031@gmail.com</p>
+                <div class="flex-container">
+                    <img src="images/Github.png" alt="Github Icon" class="flex-image" width="20" height="20" loading="lazy">
+                    <div class="flex-text">
+                        <p><a href="https://github.com/Annnl" target="_blank">My Github</a></p>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <img src="images/LinkedIn.png" alt="LinkedIn Icon" class="flex-image" width="20" height="20" loading="lazy">
+                    <div class="flex-text">
+                        <p><a href="https://www.linkedin.com/in/ning-ni-67867020a/" target="_blank">My LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="zh">
             <h2><span class="centered">经历</span></h2>
             <div class="flex-container">
-                <img src="TuftsFall24_059.jpg" alt="示例图片" class="flex-image" width="210" height="280" loading="lazy">
+                <img src="images/TuftsFall24_059.jpg" alt="示例图片" class="flex-image" width="210" height="280" loading="lazy">
             <div class="flex-text"><p>我于2022年从宾夕法尼亚州立大学取得物理学学士学位，
                 并于2024年从石溪大学取得物理学硕士学位。期间在欧洲核子研究中心（CERN）的
                 ATLAS实验组从事应用域对抗神经网络的实验高能物理研究，搭建辨别底夸克衰变来源的分类器。</p>
@@ -33,38 +83,155 @@
             <h2><span class="centered">联系方式</span></h2>
             <p>电子邮箱：quark437186031@gmail.com</p>
             <div class="flex-container">
-            <img src="Github.png" alt="示例图片" class="flex-image" width="20" height="20" loading="lazy">
+            <img src="images/Github.png" alt="示例图片" class="flex-image" width="20" height="20" loading="lazy">
             <div class="flex-text">
             <p><a href="https://github.com/Annnl" target="_blank">我的Github</a></p>
             </div>
             </div>
             <div class="flex-container">
-            <img src="LinkedIn.png" alt="示例图片" class="flex-image" width="20" height="20" loading="lazy">
+            <img src="images/LinkedIn.png" alt="示例图片" class="flex-image" width="20" height="20" loading="lazy">
             <div class="flex-text">
             <p><a href="https://www.linkedin.com/in/ning-ni-67867020a/" target="_blank">我的LinkedIn</a></p>
             </div>
             </div>
+            </div>
         </div>
 
+        <!-- 软件工程项目 -->
         <div id="swe" class="tab-content">
-            <h2>关于我</h2>
-            <p>这里是关于我的介绍。</p>
-            <p>你可以分享你的兴趣、技能和经历。</p>
+            <!-- 中文版本 -->
+            <div class="lang-content active" data-lang="zh">
+                <h2>软件工程项目</h2>
+                
+                <div class="project-item">
+                    <div class="flex-container">
+                    <img src="images\huashi.png" alt="Github Icon" class="flex-image" width="100" height="100" loading="lazy">
+                    <div class="flex-text">
+                        <h3>公司ERP系统开发</h3>
+                        <p>为公司内部数据管理开发ERP系统与所需字典的CRUD接口</p>
+                    </div>
+                </div>
+                    <p><strong>技术栈：</strong> flask, sqlalchemy, Navicat</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>项目二：移动应用开发</h3>
+                    <p><strong>技术栈：</strong>React Native, Firebase</p>
+                    <p><strong>项目描述：</strong>设计并开发跨平台移动应用，支持iOS和Android系统。</p>
+                    <p><strong>主要成果：</strong>成功发布到应用商店，获得用户好评。</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>项目三：系统架构设计</h3>
+                    <p><strong>技术栈：</strong>Docker, Kubernetes, AWS</p>
+                    <p><strong>项目描述：</strong>设计并实施微服务架构，提高系统的可扩展性和维护性。</p>
+                    <p><strong>主要成果：</strong>系统性能提升40%，部署效率提高60%。</p>
+                </div>
+            </div>
+
+            <!-- 英文版本 -->
+            <div class="lang-content" data-lang="en">
+                <h2>Software Engineering Projects</h2>
+                
+                <div class="project-item">
+                    <h3>Project 1: Web Application Development</h3>
+                    <p><strong>Skill:</strong> React, Node.js, MongoDB</p>
+                    <p><strong>Description:</strong> Developed a full-stack web application with user authentication, data management, and real-time communication features.</p>
+                    <p><strong>Key Achievements:</strong> Implemented efficient front-end and back-end separation architecture, optimized database query performance.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Project 2: Mobile Application Development</h3>
+                    <p><strong>Skill:</strong> React Native, Firebase</p>
+                    <p><strong>Description:</strong> Designed and developed cross-platform mobile applications supporting both iOS and Android systems.</p>
+                    <p><strong>Key Achievements:</strong> Successfully published to app stores with positive user reviews.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Project 3: System Architecture Design</h3>
+                    <p><strong>Title:</strong> Designed and implemented microservice architecture to improve system scalability and maintainability.</p>
+                    <p><strong>Skill:</strong> Docker, Kubernetes, AWS</p>
+                    <p><strong>Description:</strong> 40% improvement in system performance, 60% increase in deployment efficiency.</p>
+                </div>
+            </div>
         </div>
 
+        <!-- 数据科学/AI项目 -->
         <div id="data" class="tab-content">
-            <h2>关于我</h2>
-            <p>这里是关于我的介绍。</p>
-            <p>你可以分享你的兴趣、技能和经历。</p>
+            <!-- 中文版本 -->
+            <div class="lang-content" data-lang="zh">
+                <h2>数据科学/AI项目</h2>
+                
+                <div class="project-item">
+                    <h3>CERN ATLAS实验 - 底夸克分类器</h3>
+                    <p><strong>技术栈：</strong>Python, TensorFlow, ROOT, PyTorch</p>
+                    <p><strong>项目描述：</strong>应用域对抗神经网络技术，开发用于识别底夸克衰变来源的机器学习分类器。</p>
+                    <p><strong>主要成果：</strong>提高了粒子物理实验中底夸克识别的准确性，为高能物理研究做出贡献。</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>数据分析与可视化平台</h3>
+                    <p><strong>技术栈：</strong>Python, Pandas, Matplotlib, Plotly, Jupyter</p>
+                    <p><strong>项目描述：</strong>构建了综合性数据分析平台，支持大规模数据处理和交互式可视化。</p>
+                    <p><strong>主要成果：</strong>提升了数据分析效率，帮助团队快速洞察数据模式。</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>机器学习预测模型</h3>
+                    <p><strong>技术栈：</strong>Scikit-learn, XGBoost, Feature Engineering</p>
+                    <p><strong>项目描述：</strong>开发多种机器学习模型用于预测分析，包括回归和分类任务。</p>
+                    <p><strong>主要成果：</strong>模型准确率达到95%以上，为业务决策提供可靠支持。</p>
+                </div>
+            </div>
+
+            <!-- 英文版本 -->
+            <div class="lang-content active" data-lang="en">
+                <h2>Data Science/AI Projects</h2>
+                
+                <div class="project-item">
+                    <h3>CERN ATLAS Experiment - Bottom Quark Classifier</h3>
+                    <p><strong>Tech Stack:</strong> Python, TensorFlow, ROOT, PyTorch</p>
+                    <p><strong>Description:</strong> Applied domain adversarial neural network techniques to develop machine learning classifiers for identifying the origins of bottom quark decay.</p>
+                    <p><strong>Key Achievements:</strong> Improved accuracy of bottom quark identification in particle physics experiments, contributing to high-energy physics research.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Data Analysis & Visualization Platform</h3>
+                    <p><strong>Tech Stack:</strong> Python, Pandas, Matplotlib, Plotly, Jupyter</p>
+                    <p><strong>Description:</strong> Built a comprehensive data analysis platform supporting large-scale data processing and interactive visualization.</p>
+                    <p><strong>Key Achievements:</strong> Enhanced data analysis efficiency, helping teams quickly discover data patterns.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Machine Learning Prediction Models</h3>
+                    <p><strong>Tech Stack:</strong> Scikit-learn, XGBoost, Feature Engineering</p>
+                    <p><strong>Description:</strong> Developed various machine learning models for predictive analysis, including regression and classification tasks.</p>
+                    <p><strong>Key Achievements:</strong> Achieved model accuracy of over 95%, providing reliable support for business decisions.</p>
+                </div>
+            </div>
         </div>
-        
+
+        <!-- 兴趣爱好 -->
         <div id="hobby" class="tab-content">
-            <h2>联系方式</h2>
-            <p>你可以通过以下方式联系我：</p>
-            <ul>
-                <li>Email: your.email@example.com</li>
-                <li>社交媒体: @yourprofile</li>
-            </ul>
+            <!-- 中文版本 -->
+            <div class="lang-content" data-lang="zh">
+                <h2>兴趣爱好</h2>
+
+                <div class="project-item">
+                    <h3>个人理念</h3>
+                    <p>我相信技术应该服务于人类，让生活变得更美好。在工作中，我追求技术excellence和创新，在生活中，我注重平衡和成长。持续学习和保持好奇心是我的人生座右铭。</p>
+                </div>
+            </div>
+
+            <!-- 英文版本 -->
+            <div class="lang-content active" data-lang="en">
+                <h2>Hobbies & Interests</h2>
+
+                <div class="project-item">
+                    <h3>Personal Philosophy</h3>
+                    <p>I believe technology should serve humanity and make life better. At work, I pursue technical excellence and innovation; in life, I focus on balance and growth. Continuous learning and maintaining curiosity are my life mottos.</p>
+                </div>
+            </div>
         </div>
     </main>
 
