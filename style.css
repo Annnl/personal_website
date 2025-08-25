@@ -119,7 +119,7 @@ button {
 
 /* 确保 main 区域有一些基本布局 */
 main {
-    max-width: 800px; /* 限制内容最大宽度 */
+    max-width: 900px; /* 限制内容最大宽度 */
     margin: 0 auto; /* 居中内容 */
     padding: 0 20px; /* 左右内边距 */
 }
