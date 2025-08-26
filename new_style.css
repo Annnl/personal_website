@@ -1,0 +1,341 @@
+/* 基础重置和盒模型 */
+* {
+    box-sizing: border-box;
+}
+
+/* 保留原有body样式并添加响应式改进 */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+    margin: 0;
+    padding: 0;
+}
+
+/* 保留原有header样式 */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 语言切换按钮样式 - 保留原有设计 */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+.lang-btn.active {
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 保留原有按钮样式 */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.centered {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* 保留原有分页标签导航样式 */
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab-link {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px 5px 0 0;
+    margin: 0 2px;
+    border-bottom: none;
+}
+
+.tab-link:hover {
+    background-color: #ccc;
+}
+
+.tab-link.active {
+    background-color: #f0f0f0;
+    color: #007BFF;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: bold;
+}
+
+/* 保留原有分页内容区域样式 */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    animation: fadeIn 0.5s;
+    text-align: left;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 语言内容切换 */
+.lang-content {
+    display: none;
+}
+
+.lang-content.active {
+    display: block;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 确保 main 区域有一些基本布局 */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 保留原有flex布局 */
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.flex-text {
+    flex: 1 1 auto;
+}
+
+.flex-text p {
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+/* 保留原有项目样式 */
+.project-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.project-item h3 {
+    color: #007BFF;
+    margin-top: 0;
+}
+
+/* 基础图片响应式 */
+.flex-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 移动端适配 - 768px以下 */
+@media (max-width: 768px) {
+    /* 语言切换按钮在移动端的调整 */
+    .language-switch {
+        position: relative;
+        top: auto;
+        right: auto;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    #main-title {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    /* 标签导航在移动端的调整 */
+    .tabs {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 10px;
+    }
+
+    .tab-link {
+        margin: 2px 0;
+        border-radius: 5px;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .tab-link.active {
+        border-bottom: 1px solid #007BFF;
+    }
+
+    /* 主要内容区域调整 */
+    main {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .tab-content {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    /* Flex容器在移动端变为垂直布局 */
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .flex-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* 项目卡片在移动端的调整 */
+    .project-item {
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    /* 按钮在移动端的调整 */
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin: 3px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* 图片在移动端的处理 */
+    .flex-image {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    /* 确保大图片在手机上不会溢出 */
+    .flex-image[style*="max-width: 800px"],
+    .flex-image[style*="max-width: 400px"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* 小屏幕手机适配 - 480px以下 */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    #main-title {
+        font-size: 1.3rem;
+        padding: 0 10px;
+    }
+
+    .language-switch {
+        gap: 5px;
+    }
+
+    .lang-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .tab-link {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .tab-content {
+        padding: 10px;
+    }
+
+    .project-item {
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    .flex-container {
+        gap: 10px;
+    }
+
+    main {
+        padding: 0 5px;
+    }
+
+    /* 文字大小在超小屏幕上的调整 */
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* 确保所有图片都是响应式的 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 超宽屏幕的限制 */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1000px;
+    }
+}
