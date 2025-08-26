@@ -8,8 +8,8 @@ body {
     font-family: sans-serif;
     text-align: center;
     background-color: #f0f0f0;
-    transition: background-color 0.5s;
-    margin: 0;
+    transition: background-color 0.5s; /* 保留背景颜色切换效果 */
+    margin: 0; /* 移除默认的 body margin */
     padding: 0;
 }
 
@@ -18,7 +18,7 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem 0;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 在头部和标签页之间添加一些间距 */
     position: relative;
 }
 
@@ -55,28 +55,28 @@ header {
 
 /* 保留原有按钮样式 */
 button {
-    padding: 10px 15px;
+    padding: 10px 15px; /* 稍微调整按钮内边距 */
     font-size: 16px;
     cursor: pointer;
     border: none;
     background-color: #007BFF;
     color: white;
     border-radius: 5px;
-    margin: 5px;
+    margin: 5px; /* 给按钮之间添加一些间距 */
 }
 
 .centered {
-    display: block;
-    width: 100%;
-    text-align: center;
+    display: block;           /* 或 inline-block */
+    width: 100%;              /* 让元素撑满容器宽度 */
+    text-align: center;       /* 仅该元素内文字居中 */
 }
 
 /* 保留原有分页标签导航样式 */
 .tabs {
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex; /* 让标签按钮水平排列 */
+    justify-content: center; /* 居中标签按钮 */
+    flex-wrap: wrap; /* 添加换行支持 */
 }
 
 .tab-link {
@@ -85,10 +85,10 @@ button {
     border: 1px solid #ccc;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px 5px 0 0;
-    margin: 0 2px;
-    border-bottom: none;
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+    border-radius: 5px 5px 0 0; /* 给标签顶部一些圆角 */
+    margin: 0 2px; /* 标签之间的微小间距 */
+    border-bottom: none; /* 移除底部边框，使其看起来与内容区连接 */
 }
 
 .tab-link:hover {
@@ -96,24 +96,24 @@ button {
 }
 
 .tab-link.active {
-    background-color: #f0f0f0;
-    color: #007BFF;
-    border-bottom: 1px solid #f0f0f0;
+    background-color: #f0f0f0; /* 与页面背景色一致，或选择一个高亮色 */
+    color: #007BFF; /* 激活标签的文字颜色 */
+    border-bottom: 1px solid #f0f0f0; /* 使得激活标签看起来与内容区域融合 */
     font-weight: bold;
 }
 
 /* 保留原有分页内容区域样式 */
 .tab-content {
-    display: none;
+    display: none; /* 默认隐藏所有内容区域 */
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: white;
-    animation: fadeIn 0.5s;
+    border: 1px solid #ccc; /* 给内容区域一个边框 */
+    background-color: white; /* 内容区域背景色 */
+    animation: fadeIn 0.5s; /* 添加淡入动画效果 */
     text-align: left;
 }
 
 .tab-content.active {
-    display: block;
+    display: block; /* 只显示标记为 active 的内容区域 */
 }
 
 /* 语言内容切换 */
@@ -133,25 +133,25 @@ button {
 
 /* 确保 main 区域有一些基本布局 */
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 900px; /* 限制内容最大宽度 */
+    margin: 0 auto; /* 居中内容 */
+    padding: 0 20px; /* 左右内边距 */
 }
 
 /* 保留原有flex布局 */
 .flex-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    display: flex;                  /* 启用 Flexbox 布局 */
+    align-items: flex-start;        /* 子项顶部对齐，如果需要可改为 center 垂直居中 */
+    gap: 16px;                       /* 子项之间水平留 16px 间距 */
 }
 
 .flex-text {
-    flex: 1 1 auto;
+    flex: 1 1 auto;                 /* 文字容器可伸缩，内容多时换行 */
 }
 
 .flex-text p {
-    margin: 0 0 12px;
-    line-height: 1.5;
+    margin: 0 0 12px;               /* 段落之间留空，形成多段效果 */
+    line-height: 1.5;               /* 多行段落行高，以提高可读性 */
 }
 
 /* 保留原有项目样式 */
@@ -230,6 +230,29 @@ main {
         align-items: center;
         text-align: center;
         gap: 15px;
+    }
+
+    /* 特殊处理：当flex-container包含多张图片时，图片保持水平排列 */
+    .flex-container:has(img + img) {
+        flex-direction: column;
+    }
+    
+    .flex-container:has(img + img) .flex-image {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    /* 为了兼容性，使用类选择器的方式 */
+    .flex-container.multi-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .flex-container.multi-images .flex-image {
+        display: inline-block;
+        margin: 0 3px;
+        max-width: 70px;
+        width: auto;
     }
 
     .flex-text {
