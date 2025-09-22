@@ -362,3 +362,16 @@ img {
         max-width: 1000px;
     }
 }
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  align-items: flex-start;  /* 👈 防止拉伸图片高度 */
+}
+
+.scroll-container img {
+  width: auto;
+  max-height: 400px;       /* 按比例缩放 */
+  flex-shrink: 0;     /* 不被压缩 */
+}

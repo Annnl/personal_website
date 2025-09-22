@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>横向滚动图片</title>
+  <style>
+    .scroll-container {
+      display: flex;              /* 横向排列 */
+      overflow-x: auto;           /* 横向溢出时出现滚动条 */
+      white-space: nowrap;        /* 避免换行 */
+      border: 2px solid #ccc;
+      padding: 10px;
+      gap: 10px;                  /* 图片间距 */
+    }
+    .scroll-container img {
+      height: 150px;              /* 固定高度，等比例缩放 */
+      flex-shrink: 0;             /* 不要被压缩 */
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>横向滚动的图片集</h2>
+  <div class="scroll-container">
+    <img src="https://picsum.photos/id/1015/300/200" alt="图片1">
+    <img src="https://picsum.photos/id/1016/300/200" alt="图片2">
+    <img src="https://picsum.photos/id/1018/300/200" alt="图片3">
+    <img src="https://picsum.photos/id/1019/300/200" alt="图片4">
+    <img src="https://picsum.photos/id/1020/300/200" alt="图片5">
+    <img src="https://picsum.photos/id/1021/300/200" alt="图片6">
+    <img src="https://picsum.photos/id/1015/300/200" alt="图片1">
+    <img src="https://picsum.photos/id/1016/300/200" alt="图片2">
+    <img src="https://picsum.photos/id/1018/300/200" alt="图片3">
+    <img src="https://picsum.photos/id/1019/300/200" alt="图片4">
+    <img src="https://picsum.photos/id/1020/300/200" alt="图片5">
+    <img src="https://picsum.photos/id/1021/300/200" alt="图片6">
+  </div>
+</body>
+</html>
